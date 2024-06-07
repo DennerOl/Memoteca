@@ -2,7 +2,7 @@
 que vai ser passado para o back-end */
 
 export interface Pensamento {
-  id: number;
+  id?: number;
   conteudo: string;
   autoria: string;
   modelo: string;
