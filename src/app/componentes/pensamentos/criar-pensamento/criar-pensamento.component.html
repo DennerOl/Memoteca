@@ -50,6 +50,15 @@
       Digite no mínimo 3 caracteres!
     </div>
 
+    <div
+      class="mensagem__erro"
+      *ngIf="
+        formulario.get('autoria')?.errors && formulario.get('autoria')?.touched
+      "
+    >
+      Deve conter somente letras minúsculas!
+    </div>
+
     <label for="modelo">Selecione o modelo do card:</label>
 
     <div class="container-radio">
