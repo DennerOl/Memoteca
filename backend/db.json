@@ -4,66 +4,77 @@
       "id": 1,
       "conteudo": "Que bom que vc veio",
       "autoria": "Den",
-      "modelo": "modelo1"
+      "modelo": "modelo1",
+      "favorito": false
     },
     {
       "id": 3,
       "conteudo": "Angular é o melhor'",
       "autoria": "Dev ",
-      "modelo": "modelo3"
+      "modelo": "modelo3",
+      "favorito": true
     },
     {
       "conteudo": "Pensamento Denner",
       "autoria": "Dev em construção",
       "modelo": "modelo3",
+      "favorito": false,
       "id": 4
     },
     {
       "conteudo": "pensamento valida form",
       "autoria": "aula validação",
       "modelo": "modelo2",
+      "favorito": false,
       "id": 5
     },
     {
       "conteudo": "Denner",
       "autoria": "dener",
       "modelo": "modelo2",
+      "favorito": false,
       "id": 6
     },
     {
       "conteudo": "Denner",
       "autoria": "dener",
       "modelo": "modelo2",
+      "favorito": false,
       "id": 7
     },
     {
       "conteudo": "Denner",
       "autoria": "dener",
       "modelo": "modelo2",
+      "favorito": false,
       "id": 8
     },
     {
       "conteudo": "Denner",
       "autoria": "dener",
       "modelo": "modelo2",
+      "favorito": false,
       "id": 9
     },
     {
       "conteudo": "Denner",
       "autoria": "dener",
       "modelo": "modelo2",
+      "favorito": false,
       "id": 10
     },
     {
       "conteudo": "Denner",
       "autoria": "dener",
       "modelo": "modelo2",
+      "favorito": false,
       "id": 11
     },
     {
       "conteudo": "Denner",
       "autoria": "dener",
       "modelo": "modelo2",
+      "favorito": false,
       "id": 12
     }
   ]
