@@ -17,25 +17,22 @@
         ngModel
         required
         minlenght="2"
+        #nome="ngModel"
       />
-      <div
-        *ngIf="
-          (f.controls['nome']?.invalid && f.controls['nome']?.touched) ||
-          f.controls['nome']?.dirty
-        "
-      >
-        <span
-          class="erro__texto"
-          *ngIf="f.controls['nome']?.errors?.
+      <div *ngIf="(nome?.invalid && nome?.touched) || nome?.dirty">
+        <app-mensagem
+          *ngIf="nome?.errors?.
         ['required']"
-          >O campo de nome deve ser preenchido.</span
+          mensagem="O campo de nome deve ser preenchido"
         >
-        <span
-          class="erro__texto"
-          *ngIf="f.controls['nome']?.errors?.
+        </app-mensagem>
+
+        <app-mensagem
+          *ngIf="nome?.errors?.
         ['minlength']"
-          >O nome deve ter no mínimo 2 caracteres.</span
+          mensagem="O nome deve ter no mínimo 2 caracteres"
         >
+        </app-mensagem>
       </div>
     </div>
     <div class="formulario__dupla">
@@ -47,7 +44,27 @@
           type="date"
           class="campo__escrita"
           ngModel
+          required
+          maiorIdadeValidator
+          #nascimento="ngModel"
         />
+        <div
+          *ngIf="
+            (nascimento?.invalid && nascimento?.touched) || nascimento?.dirty
+          "
+        >
+          <app-mensagem
+            *ngIf="nascimento?.errors?.['required']"
+            mensagem="A data de nascimento deve ser preenchida."
+          >
+          </app-mensagem>
+
+          <app-mensagem
+            *ngIf="nascimento?.errors?.['maiorIdadeValidator']"
+            mensagem="O usuário deve ter mais de 18 anos."
+          >
+          </app-mensagem>
+        </div>
       </div>
       <div class="formulario__campo">
         <label class="campo__etiqueta" for="telefone">Contato</label>
@@ -60,27 +77,25 @@
           ngModel
           required
           pattern="(\(?\d{2}\)?\s?)(\d{5}\-?\d{4})"
+          #telefone="ngModel"
         />
 
         <div
-          *ngIf="
-            (f.controls['telefone']?.invalid &&
-              f.controls['telefone']?.touched) ||
-            f.controls['telefone']?.dirty
-          "
+          *ngIf="(telefone?.invalid && telefone?.touched) || telefone?.dirty"
         >
-          <span
-            class="erro__texto"
-            *ngIf="f.controls['telefone']?.errors?.
+          <app-mensagem
+            *ngIf="telefone?.errors?.
         ['required']"
-            >O campo de telefone deve ser preenchido.</span
+            mensagem="O campo de telefone deve ser preenchido"
           >
-          <span
-            class="erro__texto"
-            *ngIf="f.controls['telefone']?.errors?.
-        ['pattern']"
-            >O telefone contém erros.</span
+          </app-mensagem>
+
+          <app-mensagem
+            *ngIf="telefone?.errors?.
+          ['pattern']"
+            mensagem="O  telefone contém erros"
           >
+          </app-mensagem>
         </div>
       </div>
     </div>
@@ -93,25 +108,22 @@
         class="campo__escrita"
         ngModel
         pattern="^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$"
+        #email="ngModel"
       />
-      <div
-        *ngIf="
-          (f.controls['email']?.invalid && f.controls['email']?.touched) ||
-          f.controls['email']?.dirty
-        "
-      >
-        <span
-          class="erro__texto"
-          *ngIf="f.controls['email']?.errors?.
-      ['required']"
-          >O campo de email deve ser preenchido.</span
+      <div *ngIf="(email?.invalid && email?.touched) || email?.dirty">
+        <app-mensagem
+          *ngIf="email?.errors?.
+        ['required']"
+          mensagem="O campo de email deve ser preenchido"
         >
-        <span
-          class="erro__texto"
-          *ngIf="f.controls['email']?.errors?.
-      ['pattern']"
-          >O campo de email deve seguir o padrão</span
+        </app-mensagem>
+
+        <app-mensagem
+          *ngIf="email?.errors?.
+        ['pattern']"
+          mensagem="O campo de email deve seguir o padrão"
         >
+        </app-mensagem>
       </div>
     </div>
 
